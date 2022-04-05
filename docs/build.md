@@ -1,7 +1,6 @@
 # Build/Run
 
-### Compiling Smart contracts and generating .BIN and .ABI files. Check the files generated in /build dir.
-
+### Compiling Smart contracts and generating .BIN and .ABI files. Check the files generated in /build dir. Short tutorial how to use the abigen tool [here](https://www.metachris.com/2021/05/creating-go-bindings-for-ethereum-smart-contracts/)
 ```shell
 make solc
 ```
