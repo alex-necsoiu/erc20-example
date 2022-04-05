@@ -1,0 +1,18 @@
+{
+  "name": "unlockd",
+  "version": "1.0.0",
+  "description": "Unlocked Protocol. Loans based on NFTs Colaterals ",
+  "dependencies": {
+    "openzeppelin-solidity": "4.4.2",
+    "solc": "^0.8.11"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.4.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Necsoiu",
+  "license": "ISC"
+}
