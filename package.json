@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Unlocked Protocol. Loans based on NFTs Colaterals ",
   "dependencies": {
+    "node-modules": "^1.0.1",
     "openzeppelin-solidity": "4.4.2",
     "solc": "^0.8.11"
   },

@@ -13,6 +13,7 @@ make abigen
 
 ```shell
 make deploy
+make testnet
 ```
 ### Run a Client interaction with ERC20 contract.
 
