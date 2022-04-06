@@ -16,12 +16,12 @@ import (
 
 const (
 	ganacheUrl     = "http://localhost:7545"
-	addr2          = "0xD890c3FC59FCBddf5Ce62aC9AFfC90DEbb7C88DE"
-	rinkebyAddress = "0xAa3777F59260b8bD003e850E321AdBc576115b06"
+	addr2          = "0xB976e687AE16528475B80896a6313799f8030f7c"
+	ropstenAddress = "0xB976e687AE16528475B80896a6313799f8030f7c"
 	contractAddres = "0xAF6925eb0ad743F9987fE5Fb0a39102cb13FF544"
-	infuraUrl      = "https://rinkeby.infura.io/v3/7db961138c114b7882db2ff9788cded0"
+	infuraUrl      = "https://ropsten.infura.io/v3/0c4ddf2996e14b63b79ad69cf5210281"
 
-	pKey = "fd2179823adc4e772665848074ff54c3a0351a06accbb9e08498a51da1b519c5"
+	pKey = "71a82eef9bdc4f237b57a4695fdcdb737dff4e96b8773c79108df1a9c6724074"
 )
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 	// }
 
 	// Convert string into Address
-	address := common.HexToAddress(rinkebyAddress)
+	address := common.HexToAddress(ropstenAddress)
 	cAddress := common.HexToAddress(contractAddres)
 
 	// date := big.NewInt(1514764800)
@@ -72,7 +72,7 @@ func TxOpts(ctx context.Context, client *ethclient.Client, privateKey *ecdsa.Pri
 	fmt.Println("New Tx Options!")
 	fmt.Println("\n============================")
 
-	add := common.HexToAddress(rinkebyAddress)
+	add := common.HexToAddress(ropstenAddress)
 
 	nonce, err := client.PendingNonceAt(context.Background(), add)
 	if err != nil {
@@ -98,6 +98,7 @@ func TxOpts(ctx context.Context, client *ethclient.Client, privateKey *ecdsa.Pri
 	auth.Value = big.NewInt(0)     // in wei
 	auth.GasLimit = uint64(300000) // in units
 	auth.GasPrice = gasPrice
+	auth.Signer = Signer
 
 	// auth.GasPrice = gasPrice
 	// auth.GasLimit = uint64(6000000)
